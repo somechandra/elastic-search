@@ -1,0 +1,21 @@
+.InputContainer {
+  flex: 1;
+}
+
+.InputField {
+  color: gray;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 1px solid gray;
+  height: 40px;
+}
+
+.InputField:focus {
+  outline: none;
+}
+
+.InputFieldBtn {
+  height: 40px;
+}

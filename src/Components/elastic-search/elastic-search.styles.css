@@ -1,0 +1,33 @@
+.ElasticSearchContainer {
+  position: fixed;
+  width: 40vw;
+  background: #333333;
+  opacity: 0.97;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 20;
+  text-align: left;
+  font-size: 14px;
+}
+
+.ElasticSearchHeader {
+  display: flex;
+  padding: 10px 10px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ElasticSearchBody {
+  padding: 10px auto;
+  height: 100%;
+}
+
+.ElasticSearchCloseBtn {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ElasticSearchHeaderLabel {
+  flex: 1;
+}

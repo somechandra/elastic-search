@@ -1,0 +1,47 @@
+.AdvancedSearch {
+  padding: 10px 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.SelectContainer {
+  height: 40px;
+  order: none;
+  border-bottom: 1px solid gray;
+}
+
+.CustomSearchBody {
+  padding: 15px 0px;
+  margin-bottom: 0px;
+  display: grid;
+}
+
+.CustomSearchBody label {
+  color: white;
+}
+
+.SelectContainer:focus {
+  outline: none;
+  border-left: none;
+  border-top: none;
+}
+
+.CustomSearchContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1000ms ease-in-out;
+  flex: 1;
+}
+
+.CustomSearchContainer.Show {
+  max-height: 100px;
+}
+
+.Results {
+  height: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+  flex: 4;
+  overflow: auto;
+}
