@@ -4,10 +4,25 @@ import Card from "../card/card.component";
 
 import Classes from "./result-item.styles.css";
 
-const ResultItem = ({ cardItems }) => (
-  <div>
-    {cardItems.map(cardItem => {
-      <Card title={cardItem.title} text={cardItem.text} />;
+const ResultItem = ({ records }) => (
+  <div className={Classes.Results}>
+    {records.map(record => {
+      return (
+        <Card
+          key={record.id}
+          title={record.discriminator}
+          text={record.name}
+          description={record.description}
+          domain={record.domain}
+          taskCardTypeName={record.taskCardTypeName}
+          billOfWorkName={record.billOfWorkName}
+          plannedAircraftDeliveryDate={record.plannedAircraftDeliveryDate}
+          revisedAircraftDeliveryDate={record.revisedAircraftDeliveryDate}
+          statusTypeName={record.statusTypeName}
+          actualCheckLength={record.actualCheckLength}
+          aircraftTailNumber={record.aircraftTailNumber}
+        />
+      );
     })}
   </div>
 );

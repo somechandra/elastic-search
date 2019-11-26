@@ -9,10 +9,6 @@ class ElasticSearch extends React.Component {
     super(props);
   }
 
-  handleChange = e => {
-    console.log(e.target.value);
-  };
-
   render() {
     return (
       <div className={Classes.ElasticSearchContainer}>
@@ -26,7 +22,7 @@ class ElasticSearch extends React.Component {
           </div>
         </div>
         <div className={Classes.ElasticSearchBody}>
-          <AdvancedSearch handleChange={this.handleChange} />
+          <AdvancedSearch />
         </div>
       </div>
     );

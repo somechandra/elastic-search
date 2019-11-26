@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/* import Main from "./Main";
-import AdvanceSearchComponent from "./SearchCriteria/AdvanceSearchComponent"; */
 import ElasticSearch from "./Components/elastic-search/elastic-search.component";
 
 class Index extends React.Component {
@@ -28,8 +26,6 @@ class Index extends React.Component {
     };
     return (
       <span>
-        {/* <Main /> */}
-        {/* <AdvanceSearchComponent /> */}
         <span onClick={this.handleIconClick}>
           <i className="fa fa-search fa-1-2x" style={styles.btn}></i>
         </span>

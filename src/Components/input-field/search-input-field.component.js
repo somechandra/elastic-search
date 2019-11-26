@@ -1,5 +1,7 @@
 import React from "react";
 
+import CustomButton from "../custom-button/custom-button.component";
+
 import Classes from "./search-input-field.styles.css";
 
 const SearchInputField = ({
@@ -17,19 +19,12 @@ const SearchInputField = ({
         onChange={handleChange}
       />
       <span className="input-group-btn">
-        <button
-          className={"btn btn-default " + Classes.InputFieldBtn}
-          type="button"
-          onClick={toggleCustomSearch}
-        >
+        <CustomButton onClick={toggleCustomSearch}>
           <i className={"fa " + caret}></i>
-        </button>
-        <button
-          className={"btn btn-default " + Classes.InputFieldBtn}
-          type="button"
-        >
+        </CustomButton>
+        <CustomButton>
           <i className="fa fa-search"></i>
-        </button>
+        </CustomButton>
       </span>
     </div>
   );

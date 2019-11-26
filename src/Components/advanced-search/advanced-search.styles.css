@@ -9,6 +9,7 @@
   height: 40px;
   order: none;
   border-bottom: 1px solid gray;
+  border-radius: 0px;
 }
 
 .CustomSearchBody {
@@ -36,12 +37,4 @@
 
 .CustomSearchContainer.Show {
   max-height: 100px;
-}
-
-.Results {
-  height: 100%;
-  border-radius: 4px;
-  margin-top: 10px;
-  flex: 4;
-  overflow: auto;
 }
