@@ -3,7 +3,9 @@ import React from "react";
 import Classes from "./card.styles.css";
 
 const BillOfWorkCard = ({
+  id,
   text,
+  discriminator,
   aircraftTailNumber,
   actualCheckLength,
   plannedAircraftDeliveryDate,
@@ -20,7 +22,15 @@ const BillOfWorkCard = ({
           <span>WO</span>
         </div>
         <div className={Classes.MoreInfo}>
-          <div className={Classes.CardTitle}>{text}</div>
+          <div className={Classes.CardTitle}>
+            {discriminator === "HeavyBOW" ? (
+              <a href={void 0} onClick={() => handleWOClick(id)}>
+                {text}
+              </a>
+            ) : (
+              text
+            )}
+          </div>
           <div className={Classes.CardText}>
             {actualCheckLength} | {formattedDate(deliveryDate)} |{" "}
             {statusTypeName}
@@ -33,6 +43,16 @@ const BillOfWorkCard = ({
       </div>
     </div>
   );
+};
+
+const handleWOClick = id => {
+  location.href =
+    location.origin +
+    "/fleetcycle/billOfWork/billOfWorkReport.do?service_lookup=sessionManageBOW" +
+    "&/billOfWorkReportSearchRoot/serializedObjectId=manageBillOfWork" +
+    "&/billOfWorkReportSearchRoot/reportKey=manageBillOfWork&/" +
+    "billOfWorkReportSearchRoot/searchCriteriaBillOfWork/selectBillofworkId=" +
+    id;
 };
 
 const appendLeadingZeroes = n => {

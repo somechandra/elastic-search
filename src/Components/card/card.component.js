@@ -8,8 +8,9 @@ import Utils from "../../utils.js";
 import Classes from "./card.styles.css";
 
 const Card = ({
+  id,
   domain,
-  title,
+  discriminator,
   text,
   taskCardTypeName,
   billOfWorkName,
@@ -23,7 +24,8 @@ const Card = ({
   <div className={Classes.Card}>
     {domain === Utils.BIIL_OF_WORK ? (
       <BillOfWorkCard
-        title={title}
+        id={id}
+        discriminator={discriminator}
         text={text}
         plannedAircraftDeliveryDate={plannedAircraftDeliveryDate}
         revisedAircraftDeliveryDate={revisedAircraftDeliveryDate}
@@ -33,7 +35,7 @@ const Card = ({
       />
     ) : (
       <TaskCard
-        title={title}
+        discriminator={discriminator}
         text={text}
         description={description}
         taskCardTypeName={taskCardTypeName.join(" ")}

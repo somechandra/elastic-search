@@ -19,17 +19,6 @@ class AdvancedSearch extends React.Component {
       domainType: "",
       searchText: ""
     };
-    this.hostName = location.hostname;
-  }
-
-  componentDidMount() {
-    // fetch("http://localhost:8983/solr/COOPESA-fleetcycle/select?q=*:*")
-    //   .then(response => response.json())
-    //   .then(res =>
-    //     this.setState({ records: res.response.docs }, () =>
-    //       console.log(this.state.records)
-    //     )
-    //   );
   }
 
   toggleCustomSearch = () => {
@@ -37,11 +26,11 @@ class AdvancedSearch extends React.Component {
   };
 
   getURL = (domain, name) => {
-    console.log(document.getElementById("fcSolrEndPointValue").value);
     return (
-      "http://" +
-      this.hostName +
-      ":8983/solr/COOPESA-fleetcycle/select?" +
+      Utils.SOLR_END_POINT +
+      "/" +
+      Utils.COMPANY_ID +
+      "-fleetcycle/select?" +
       domain +
       "&q=namelc:*" +
       name +

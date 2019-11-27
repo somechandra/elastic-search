@@ -10,7 +10,8 @@ const ResultItem = ({ records }) => (
       return (
         <Card
           key={record.id}
-          title={record.discriminator}
+          id={record.id}
+          discriminator={record.discriminator}
           text={record.name}
           description={record.description}
           domain={record.domain}
