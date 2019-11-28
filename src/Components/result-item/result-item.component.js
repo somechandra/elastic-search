@@ -22,6 +22,9 @@ const ResultItem = ({ records }) => (
           statusTypeName={record.statusTypeName}
           actualCheckLength={record.actualCheckLength}
           aircraftTailNumber={record.aircraftTailNumber}
+          billOfWorkId={record.billOfWorkId}
+          taskCardName={record.taskCardName}
+          billOfWorkDiscriminator={record.billOfWorkDiscriminator}
         />
       );
     })}

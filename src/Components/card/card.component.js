@@ -19,7 +19,10 @@ const Card = ({
   revisedAircraftDeliveryDate,
   statusTypeName,
   actualCheckLength,
-  aircraftTailNumber
+  aircraftTailNumber,
+  billOfWorkId,
+  taskCardName,
+  billOfWorkDiscriminator
 }) => (
   <div className={Classes.Card}>
     {domain === Utils.BIIL_OF_WORK ? (
@@ -37,9 +40,13 @@ const Card = ({
       <TaskCard
         discriminator={discriminator}
         text={text}
+        id={id}
         description={description}
         taskCardTypeName={taskCardTypeName.join(" ")}
         billOfWorkName={billOfWorkName.join(" ")}
+        taskCardName={taskCardName.join(" ")}
+        billOfWorkId={billOfWorkId}
+        billOfWorkDiscriminator={billOfWorkDiscriminator}
       />
     )}
   </div>

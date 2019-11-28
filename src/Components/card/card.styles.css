@@ -445,3 +445,42 @@
   right: 1rem;
   font-size: 0.9em;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .CardA .Additional .UserCard span {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .CardA .General {
+    width: 91%;
+    padding-left: 7px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .CardA .General {
+    width: 89%;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .CardA .Additional .UserCard span {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  .CardA .General {
+    width: 92%;
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .CardA .General {
+    padding-left: 20px;
+  }
+}
