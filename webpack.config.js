@@ -9,7 +9,6 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 module.exports = {
   output: {
     path: path.resolve("dist"),
-    //filename: "fcElasticSearch.js"
     filename: "elasticSearchReactComponent.js"
   },
   module: {
